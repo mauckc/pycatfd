@@ -19,11 +19,11 @@ def main():
     parser = argparse.ArgumentParser(description=desc,
                                      formatter_class=formatter)
 
-    parser.add_argument('-i', '--input-image',
+    parser.add_argument('-i', '--input_image',
                         help='input image',
                         metavar='<file>')
 
-    parser.add_argument('-f', '--input-folder',
+    parser.add_argument('-f', '--input_folder',
                         help='input folder',
                         metavar='<path>')
 
@@ -36,27 +36,27 @@ def main():
                         help='output face and landmark information to JSON',
                         action='store_true')
 
-    parser.add_argument('-c', '--save-chip',
+    parser.add_argument('-c', '--save_chip',
                         help='save a cropped version of each detected cat face',
                         action='store_true')
 
-    parser.add_argument('-a', '--annotate-faces',
+    parser.add_argument('-a', '--annotate_faces',
                         help='draw a square around each detected cat face',
                         action='store_true')
 
-    parser.add_argument('-l', '--annotate-landmarks',
+    parser.add_argument('-l', '--annotate_landmarks',
                         help='''
                         draw lines between detected facial landmarks
                         ''',
                         action='store_true')
 
-    parser.add_argument('-ac', '--face-color',
+    parser.add_argument('-ac', '--face_color',
                         help='face square color',
                         type=int,
                         default=[25, 255, 100],
                         nargs=3)
 
-    parser.add_argument('-lc', '--landmark-color',
+    parser.add_argument('-lc', '--landmark_color',
                         help='facial landmark line color',
                         type=int,
                         default=[255, 50, 100],
